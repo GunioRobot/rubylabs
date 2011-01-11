@@ -1,9 +1,4 @@
-* { margin: 0; padding: 0; outline: 0; }
 
-body {
-    background-color: #fff;
-    padding: 0 0 0px 0;
-}
 
 h1, h2, h3 {
     font-family: "Trebuchet MS", Tahoma, Arial, Sans-serif;
@@ -11,106 +6,69 @@ h1, h2, h3 {
 }
 
 
-img {
-    position: relative;
-    background-color: transparent;
-}
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-a:link, a:visited {
-    display: block;
-    width: 80px;
-    color: #fff;
-    background-color: #120d0b;
-    padding: 4px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 85%;
+/* Header
+--------------------------------------------------*/
+header h1 {
+    color: #cf0000;
     font-weight: bold;
+    padding: 0 0 0 13px;
+}
+
+#header-wrap {
+    position: absolute ;
+    top: 138px;
+}
+
+#nav-top {
+    padding-top: 10px;
+}
+
+
+/* Footer
+--------------------------------------------------*/
+footer { 
+    background: #000;
+    color: white;
+    padding: 14px 0 1px 10px;
+}
+
+
+/* Navigation
+--------------------------------------------------*/
+/* nav { */
+/*     background-color: transparent; */
+/*     padding: 0 0.7em; */
+/*     white-space: nowrap; */
+/* } */
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0.2em 1em;
+}
+
+
+a:link,  a:visited {
+    color: white;
+    text-decoration: none;
 }
 
 a:hover, a:active {
-      color: #ee5647;
+   color: #ee5647;
 }
+
+
+
+
 
   
-/*------------------ Layout ---------------- */
+/* Layout
+__________________________________________________*/
 
-#container {
-    width: 900px;
-    margin-left: 5px;
-    margin-top: 30px;
-}
 
-#header {
-    width: 100%;
-    background-color: transparent;
-    margin: 125px 0 15px 15px;
-}
+/* Container
+--------------------------------------------------*/
+.container {
 
-#header h1 {
-    color: #CC0000;
-    text-align: left;
-    font-size: 350%;
-}
-
-#content-wrap {
-    /* position:relative; */
-    /* float: left; */
-    /* width: 900px; */
-    /* display: inline; */
-    /* margin-bottom: 10px; */
-}
-
-#main {
-    width: 600px;
-    float: left;
-    color: green;
-    background: #fff;
-    text-align: center;
-}
-
-#sidebar {
-    width: 300px;
-    float:right;
-    display: inline;
-    background: #99CCFF;
-}
-
-#sidebar ul {
-    list-style: none;
-    padding-left: 15px;
-    margin: 5px;
-}
-
-#footer {
-    position: relative;
-    top: 10px;
-    clear: both;
-    color: #ef5e50; 
-    background: #000;
-    padding: 10px;
-}
-
-#banner {
-    position: absolute;
-    top: 10px;
-    z-index: -1;
-
-}
-
-#top_nav {
-    position: relative;
-    top: -8px;
-    margin: 0 0 50px 0;
-}
-
-#top_nav li {
-    float: left;
 }

@@ -1,14 +1,14 @@
 class PagesController < ApplicationController
   def home
-    @tilte = "home"
+    @title = "home"
   end
 
   def about
-    @tilte = "about"
+    @title = "about"
   end
 
   def contact
-    @tilte = "contact"
+    @title = "contact"
   end
   
   def blog
