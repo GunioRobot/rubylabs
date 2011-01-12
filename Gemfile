@@ -41,6 +41,7 @@ group :development do
   gem 'rspec-rails', '2.0.1'
   gem 'annotate-models', '1.0.4'
   gem 'faker', '0.3.1'
+  gem 'cucumber-rails', '0.3.2'
 end
 
 group :test do
@@ -48,4 +49,5 @@ group :test do
   gem 'rspec' , '2.0.1'
   gem 'spork' , '0.8.4'
   gem 'factory_girl_rails', '1.0'
+  gem 'cucumber', '0.9.3'
 end
