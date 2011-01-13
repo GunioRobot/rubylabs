@@ -14,6 +14,8 @@ class User < ActiveRecord::Base
 
   attr_accessible :name, :email
   
+  has_many :posts
+  
   email_regex =  /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
   
   validates :name, :presence => true, :length => {:minimum => 4,  :maximum => 50 } 

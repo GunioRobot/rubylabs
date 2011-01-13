@@ -1,0 +1,35 @@
+
+<div class="span-17 colborder content-wrap">
+
+  <% @posts.each do |post| %>
+
+    <h3><%= post.title %></h3>
+
+    <div class="span-3">
+      <%= time_ago_in_words(post.created_at) %>
+    </div>
+
+    <div class="span-13"> 
+      <%= image_tag("blackhole250x200.gif", :size => "150x110", :alt => "Black
+      Hole", :class => "right") %>
+	<p><%= post.body %></p>
+      
+
+      <%= link_to 'Show', post %> |
+      <%= link_to 'Edit', edit_post_path(post) %> |
+      <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
+
+   
+    </div>
+    <hr />
+      
+  <% end %>
+
+  <%= link_to 'New Post', new_post_path %><br />
+
+ </div> 
+
+ <div class="span-5" id="sidebar" >
+   <%= render "shared/sidebar" %>
+</div>
+ 

@@ -2,9 +2,13 @@
 
 h1, h2, h3 {
     font-family: "Trebuchet MS", Tahoma, Arial, Sans-serif;
-    color: #ee5647;
+    /* color: #ee5647; */
+    color: black;
 }
 
+.box {
+    background-color: #E8E8E8 ;
+}
 
 
 /* Header
@@ -22,6 +26,16 @@ header h1 {
 
 #nav-top {
     padding-top: 10px;
+}
+
+
+div.content-wrap {
+    padding: 10px 0 0 25px;
+
+}
+
+div#sidebar {
+    margin-top: 15px;
 }
 
 
@@ -48,9 +62,13 @@ nav ul li {
     padding: 0.2em 1em;
 }
 
+a:link {
+    color: red;
+    text-decoration: none;
+}
 
-a:link,  a:visited {
-    color: white;
+a:visited {
+    color: red;
     text-decoration: none;
 }
 
