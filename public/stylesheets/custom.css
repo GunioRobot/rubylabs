@@ -30,12 +30,33 @@ header h1 {
 
 
 div.content-wrap {
-    padding: 10px 0 0 25px;
-
+    padding-top: 10px;
+    padding-left: 20px;
 }
 
+div.buddha-china {
+    margin-buttom: 100px;
+}
+
+p#anectode {
+    text-align: center;
+    
+}
+
+p#description {
+    text-align: center;
+    
+}
+
+
+div .context-image {
+    
+}
+
+
 div#sidebar {
-    margin-top: 15px;
+    margin-top: 25px;
+ 
 }
 
 
@@ -47,6 +68,9 @@ footer {
     padding: 14px 0 1px 10px;
 }
 
+[title] {
+   color: blue;
+}
 
 /* Navigation
 --------------------------------------------------*/

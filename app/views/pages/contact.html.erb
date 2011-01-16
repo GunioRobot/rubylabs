@@ -2,13 +2,29 @@
 
 <h3><%= @title %></h3>
 
-<div class="span-3">
-  hello Uranus<br />
-  hello Venus
-</div>
 
-<div class="span-13">
-Find me in app/views/pages/contact.html.erb
+<div class="span-14 prepend-3">
+
+  <address>
+    Ruby Labs Software. <br />
+  Untere Clignetstr. 8<br />
+  68167 Mannheim <br />
+  Germany <br /><br />
+  Telefon: +49-621-3363702<br />
+  Mobile:  +49-174-2001606<br />
+  Email: <%=raw auto_link_email_addresses("shahram@rubylabs.de") %><br />
+  Web: <%= auto_link_urls("http://rubylabs.heroku.com") %>
+  </address>
+  
+  <hr />
+<h3>  Wie sie uns finden</h3>
+
+<iframe width="425" height="350" frameborder="0" scrolling="no"
+	marginheight="0" marginwidth="0"
+	src="http://maps.google.de/maps?f=q&amp;source=s_q&amp;hl=de&amp;geocode=&amp;q=Untere+Clignetstra%C3%9Fe,+Mannheim&amp;sll=51.151786,10.415039&amp;sspn=18.143875,36.782227&amp;ie=UTF8&amp;hq=&amp;hnear=Untere+Clignetstra%C3%9Fe,+68167+Mannheim,+Baden-W%C3%BCrttemberg&amp;z=14&amp;ll=49.496039,8.478059&amp;output=embed"></iframe><br /><small><a href="http://maps.google.de/maps?f=q&amp;source=embed&amp;hl=de&amp;geocode=&amp;q=Untere+Clignetstra%C3%9Fe,+Mannheim&amp;sll=51.151786,10.415039&amp;sspn=18.143875,36.782227&amp;ie=UTF8&amp;hq=&amp;hnear=Untere+Clignetstra%C3%9Fe,+68167+Mannheim,+Baden-W%C3%BCrttemberg&amp;z=14&amp;ll=49.496039,8.478059"
+	style="color:#0000FF;text-align:left">Größere
+	Kartenansicht</a></small><br /><br />
+
 </div>
 
 
@@ -17,3 +33,4 @@ Find me in app/views/pages/contact.html.erb
 <div class="span-5" id="sidebar">
   <%= render "shared/sidebar" %>
 </div>
+

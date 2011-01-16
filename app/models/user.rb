@@ -13,6 +13,8 @@
 class User < ActiveRecord::Base
 
   attr_accessible :name, :email
+
+  
   
   has_many :posts
   
@@ -21,5 +23,12 @@ class User < ActiveRecord::Base
   validates :name, :presence => true, :length => {:minimum => 4,  :maximum => 50 } 
   validates :email, :format => { :with => email_regex, :on => :create },
                                  :uniqueness => {:case_sensitive => false}
+  
+
+  
+  
+  def self.per_page
+    10
+  end
   
 end

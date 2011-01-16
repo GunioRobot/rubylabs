@@ -7,9 +7,18 @@ gem 'rails', '3.0.3'
 
 gem 'mysql2'
 
+######################## My Gems ##########################
+
+gem 'RedCloth', '4.2.3'
+gem 'liquid', '2.2.2'
+gem 'formtastic', '~> 1.2.2'
+##########################################################
+
 # gem 'gravatar_image_tag', '0.1.0'
-# gem 'will_paginate', '3.0.pre2'
+gem 'will_paginate', '3.0.pre2'
 # gem 'jquery_rails3'
+
+
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -51,3 +60,9 @@ group :test do
   gem 'factory_girl_rails', '1.0'
   gem 'cucumber', '0.9.3'
 end
+
+#################### GEMS
+
+
+
+

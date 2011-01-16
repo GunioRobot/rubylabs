@@ -2,7 +2,10 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.xml
   def index
+    
     @posts = Post.all
+    @posts = Post.paginate(:page => params[:page])
+    
 
     respond_to do |format|
       format.html # index.html.erb
@@ -74,6 +77,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
+    flash[:success] = "Successfuly destroy post."
     respond_to do |format|
       format.html { redirect_to(posts_url) }
       format.xml  { head :ok }

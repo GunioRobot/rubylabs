@@ -9,6 +9,8 @@ Rubylabs::Application.routes.draw do
   match '/about'  , :to => 'pages#about'
   match '/home'   , :to => 'pages#home'
   
+  get "posts/create"
+  get "posts/destroy"
     
   root :to => "pages#home"
 
