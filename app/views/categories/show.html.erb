@@ -1,0 +1,13 @@
+<div class="span-17  content-wrap">
+<h2>  Template Show</h2>
+
+<% for post in @category.posts %>
+  <%= post.title %>
+  <%= truncate(post.body) %>
+<% end %>
+
+<div class="span-5" id="sidebar">
+  <%= render "shared/sidebar" %>
+</div>
+
+

@@ -6,6 +6,7 @@ namespace :db do
     Rake::Task['db:reset'].invoke
     make_users
     make_posts
+    make_categories
     # make_relationships
   end
 end
@@ -25,6 +26,13 @@ def make_posts
       body = Faker::Lorem.sentences(5)
       title = Faker::Lorem.words(3)
       user.posts.create!(:title => title, :body => body)
+    end
   end
 end
+
+def make_categories
+  15.times do |n|
+    name = Faker::Name.name
+    Category.create!( :name => name )
+  end
 end

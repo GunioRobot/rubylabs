@@ -36,11 +36,11 @@ div.content-wrap {
 
 div.buddha-china {
     margin-buttom: 100px;
+    width: 50%;
 }
 
 p#anectode {
     text-align: center;
-    
 }
 
 p#description {
@@ -80,6 +80,13 @@ footer {
 /*     white-space: nowrap; */
 /* } */
 
+.wolfram-alpha {
+    width: 50%;
+}
+
+
+
+
 nav ul li {
     list-style-type: none;
     display: inline-block;
@@ -114,3 +121,6 @@ __________________________________________________*/
 .container {
 
 }
+
+
+

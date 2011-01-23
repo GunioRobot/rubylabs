@@ -1,25 +1,25 @@
 
-<div class="span-17 colborder content-wrap">
+<div class="span-17  content-wrap">
 
-  <h2><%= @post.title %></h2>
+  <h3><%= @post.title %></h3>
 
-<div class="span-3">
-    <%= link_to 'Edit', edit_post_path(@post) %> |
-    <%= link_to 'Back', posts_path %>
-  </div>
-
+  <div class="span-4">
+      <%= time_ago_in_words(@post.created_at) %> ago. <br />
+      <%= @post.user.name  %>
+    </div>
 
   <div class="span-12">
+
+    <%=raw RedCloth.new(@post.body).to_html %>  <br />
     
-      <%=raw RedCloth.new(@post.body).to_html %>  <br />
-      <%#= @post.body %>
-  </div>
-
+    <%#= @post.body %>
+    <%= link_to 'Edit', edit_post_path(@post) %> |
+    <%= link_to 'Back', posts_path %> <br />
+</div>
   <hr />
-
 </div>
 
-<div class="span-5" id="sidebar">
+<div class="span-6" id="sidebar">
   <%= render "shared/sidebar" %>
 </div>
 

@@ -1,17 +1,31 @@
 Rubylabs::Application.routes.draw do
   
- 
+#  get "wolfram_alpha/show"
+
+  # resources :users do
+  #   member do
+  #     get :posts, :categories
+  #   end
+  # end
+  
+        
   resources :posts
   resources :users
-  
+  resources :categories
 
+  
+  match '/wolfram_alpha', :to => 'wolfram_alpha#show'
   match '/contact', :to => 'pages#contact'
   match '/about'  , :to => 'pages#about'
   match '/home'   , :to => 'pages#home'
   
   get "posts/create"
   get "posts/destroy"
-    
+  
+  # get "categories/create"
+  # get "categories/destroy"
+  
+
   root :to => "pages#home"
 
   # The priority is based upon order of creation:

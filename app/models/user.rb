@@ -14,9 +14,10 @@ class User < ActiveRecord::Base
 
   attr_accessible :name, :email
 
+  validates_presence_of :name
   
-  
-  has_many :posts
+  has_many :posts, :dependent => :destroy
+  has_many :categories, :through => :posts
   
   email_regex =  /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
   
@@ -24,8 +25,7 @@ class User < ActiveRecord::Base
   validates :email, :format => { :with => email_regex, :on => :create },
                                  :uniqueness => {:case_sensitive => false}
   
-
-  
+ 
   
   def self.per_page
     10

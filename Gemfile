@@ -12,6 +12,8 @@ gem 'mysql2'
 gem 'RedCloth', '4.2.3'
 gem 'liquid', '2.2.2'
 gem 'formtastic', '~> 1.2.2'
+gem 'validation_reflection', '>= 1.0.0'
+
 ##########################################################
 
 # gem 'gravatar_image_tag', '0.1.0'
@@ -28,7 +30,7 @@ gem 'will_paginate', '3.0.pre2'
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
-# gem 'ruby-debug19'
+gem 'ruby-debug19'
 
 # Bundle the extra gems:
 # gem 'bj'

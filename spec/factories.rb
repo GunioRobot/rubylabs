@@ -18,3 +18,8 @@ Factory.define :post do |post|
   post.title "Test Title"
   post.content "Foo bar"
 end
+
+Factory.define :category do |category|
+  category.name "Test Category"
+  category.association :post
+end

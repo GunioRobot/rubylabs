@@ -1,0 +1,2 @@
+module WolframAlphaHelper
+end

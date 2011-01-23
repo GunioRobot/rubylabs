@@ -1,27 +1,24 @@
 <%= semantic_form_for @post do |f| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
-      <ul>
-	<% @post.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-	<% end %>
-      </ul>
-    </div>
+  <%= render "shared/errors" %>
+
+  <%= f.inputs  do %>
+    <%= f.input :title, :hint => "Use the post title" %>
+    <%= f.input :body  %>
+    <%= f.input :published, :as => :radio %>
+    <%= f.input :user, :required => true %>
+    <%= f.input :category, :label => "Categories" %>
   <% end %>
 
-  <%= f.inputs do %>
-    <%= f.input :title, :label => "Title" %>
-    <%= f.input :body , :label => "Content"%>
-    <%= f.input :published %>
-    <%= f.input :user %>
+  
+ <% render "categories" %>
 
 
+  <%= f.buttons do %>
+    <%= f.commit_button "Submit" %>
   <% end %>
-<% f.buttons do %>
-  <%= f.commit_button "Submit" %>
-<% end %>
 
 <% end %>
+<%= debug(@post) if Rails.env.development? %>
+
 

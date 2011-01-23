@@ -1,47 +1,37 @@
 
-
-<div class="span-17 colborder content-wrap">
+<div class="span-17  content-wrap">
   <div class="prepend-top">
+    
     <%= will_paginate %>
-  </div>
-  <br />
-  <% @posts.each do |post| %>
+    <% @posts.each do |post| %>
+      <h3><%= post.title %></h3>
 
-
-    <h3><%= post.title %></h3>
-
-    <div class="span-4">
-      <%= time_ago_in_words(post.created_at) %> ago.
-     <br /> <%= post.user.name %><br />
-     
-    </div> 
-
-    <div class="span-12"> 
-      <!-- <%= image_tag("blackhole250x200.gif", :size => "150x110", :alt => "Black -->
-      <!-- Hole", :class => "right") %> -->
-	<%=raw RedCloth.new(truncate(post.body, :length => 140)).to_html %>
-	<br />
-	<%= link_to 'Show', post %> |
+      <div class="span-4">
+	<%= time_ago_in_words(post.created_at) %> ago. <br />
+	<%= post.user.name %><br />
+		<%= link_to 'Show', post %> |
 	<%= link_to 'Edit', edit_post_path(post) %> |
 	<%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
-				   			   
-    </div>
-    <hr />
+      </div> 
 
-  <% end %>
+      <div class="span-12"> 
+	<%#= image_tag("blackhole250x200.gif", :size => "150x110", :alt =>
+		       "Black" %>
+	<%#=raw RedCloth.new(truncate(post.body, :length => 120, :omission => '...(continue)')).to_html %>
+		<%=raw RedCloth.new(post.body).to_html %>
+ <br />
+      </div>
+      <hr />
+    <% end %>
 
-  
+    <%= link_to 'New Post', new_post_path %><br />  <br />
+    <%= will_paginate %>
 
-  <%= link_to 'New Post', new_post_path %><br />  <br />
-  <%= will_paginate %>
-</div> 
+  </div> 
+</div>
 
-
-
-
-<div class="span-5" id="sidebar" >
+<div class="span-6" id="sidebar" >
   <%= render "shared/sidebar" %>
-
 </div>
 
 
