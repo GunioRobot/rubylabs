@@ -1,4 +1,29 @@
-<h1>index</h1>
-<% for category in @categories  %>
-<%= category.name %>
-<% end %>
+<div class="span-24 content-wrap">
+  <h3>Categories</h3>
+  <div class="span-17">
+    <table>
+      <tr>
+	<th> category </th>
+      </tr>
+      <tr>
+	<% for category in @categories  %>
+	  <td>
+	    <%= category.name %>
+	  </td>
+	  <td>
+	    <%= link_to "Show", category %> |
+	    <%= link_to "Edit", edit_category_path(category) %> |
+	    <%= link_to "Destroy", category, :confirm => "Are you sure?", :method =>
+		  :delete %><br />
+	  </td>
+      </tr>
+      <% end %>
+    </table>
+    <%= link_to "New Category", new_category_path %><br /><br />
+  </div>
+
+
+  <div class="span-6" id="sidebar">
+    <%= render "shared/sidebar" %>
+  </div>
+</div>

@@ -22,8 +22,11 @@ Rubylabs::Application.routes.draw do
   get "posts/create"
   get "posts/destroy"
   
-  # get "categories/create"
-  # get "categories/destroy"
+  get "categories/create"
+  get "categories/destroy"
+  
+  get "users/create"
+  get "users/destroy"
   
 
   root :to => "pages#home"

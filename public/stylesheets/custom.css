@@ -1,4 +1,6 @@
-
+body {
+    overflow-y: scroll;
+}
 
 h1, h2, h3 {
     font-family: "Trebuchet MS", Tahoma, Arial, Sans-serif;
@@ -20,16 +22,18 @@ header h1 {
 }
 
 #header-wrap {
-    position: absolute ;
-    top: 138px;
+    position: relative ;
+    bottom: 5em;
+    padding-left: 10px;
 }
 
 #nav-top {
-    padding-top: 10px;
+    padding-top: 15px;
 }
 
 
 div.content-wrap {
+    position: relative;
     padding-top: 10px;
     padding-left: 20px;
 }
@@ -41,16 +45,6 @@ div.buddha-china {
 
 p#anectode {
     text-align: center;
-}
-
-p#description {
-    text-align: center;
-    
-}
-
-
-div .context-image {
-    
 }
 
 
@@ -84,15 +78,6 @@ footer {
     width: 50%;
 }
 
-
-
-
-nav ul li {
-    list-style-type: none;
-    display: inline-block;
-    padding: 0.2em 1em;
-}
-
 a:link {
     color: red;
     text-decoration: none;
@@ -106,11 +91,6 @@ a:visited {
 a:hover, a:active {
    color: #ee5647;
 }
-
-
-
-
-
   
 /* Layout
 __________________________________________________*/
@@ -118,9 +98,7 @@ __________________________________________________*/
 
 /* Container
 --------------------------------------------------*/
-.container {
 
-}
 
 
 
