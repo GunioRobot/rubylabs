@@ -1,18 +1,4 @@
 <div class="span-24 content-wrap">
   <h2>Edit User</h2>
-  <div class="span-17">
-    <%= semantic_form_for @user do |form| %>
-      <%= form.inputs do %>
-	<%= form.input :name %>
-	<%= form.input :email %>
-      <% end %>
-
-      <%= form.buttons do %>
-	<%= form.commit_button "Submit" %>
-      <% end %>
-    <% end %>
-
-    <%= link_to "Back", users_path %><br /><br />
-
-  </div>
+  <%= render :partial => "users_form" %>
 </div>
