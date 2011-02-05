@@ -1,32 +1,24 @@
-<div class="span-17  content-wrap">
 
-<h3><%= @title %></h3>
+<div class="span-24 content-wrap">
+  <div class="span-17">
+    <h3><%= @title %></h3>
+    <div class="span-12 prepend-2">
+      <address>
+	Ruby Labs Software. <br />
+	Untere Clignetstr. 8<br />
+	68167 Mannheim <br />
+	Germany <br /><br />
+	Telefon: +49-621-3363702<br />
+	Mobile:  +49-174-2001606<br />
+	Email: <%=raw auto_link_email_addresses("shahram@rubylabs.de") %><br />
+	Web: <%= auto_link_urls("http://rubylabs.heroku.com") %>
+      </address>
+    </div>
+    <hr />
+    <h3>  Wie sie uns finden</h3>
+  </div>
 
-
-<div class="span-13 prepend-2">
-
-  <address>
-    Ruby Labs Software. <br />
-  Untere Clignetstr. 8<br />
-  68167 Mannheim <br />
-  Germany <br /><br />
-  Telefon: +49-621-3363702<br />
-  Mobile:  +49-174-2001606<br />
-  Email: <%=raw auto_link_email_addresses("shahram@rubylabs.de") %><br />
-  Web: <%= auto_link_urls("http://rubylabs.heroku.com") %>
-  </address>
-  
-  <hr />
-<h3>  Wie sie uns finden</h3>
-
-
-
+  <div class="span-6" id="sidebar">
+    <%= render "shared/sidebar" %>
+  </div>
 </div>
-
-
-</div>
-
-<div class="span-6" id="sidebar">
-  <%= render "shared/sidebar" %>
-</div>
-

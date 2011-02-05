@@ -1,13 +1,17 @@
-<div class="span-17  content-wrap">
-<h2>  Template Show</h2>
+<div class="span-24 content-wrap">
+  <div class="span-17">
+    <h2>  Template Show</h2>
 
-<% for post in @category.posts %>
-  <%= post.title %>
-  <%= truncate(post.body) %>
-<% end %>
+    <%= @category.name %><br />
+    <%= link_to "Edit", edit_category_path(@category) %> |
+    <%= link_to "Back", categories_path %>
 
-<div class="span-5" id="sidebar">
-  <%= render "shared/sidebar" %>
+    <%# for post in @category.posts %>
+      <%#= post.title %>
+    <%# end %>
+    
+  </div>
+  <div class="span-6" id="sidebar">
+    <%= render "shared/sidebar" %>
+  </div>
 </div>
-
-

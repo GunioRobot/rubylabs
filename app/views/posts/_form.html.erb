@@ -1,24 +1,24 @@
-<%= semantic_form_for @post do |f| %>
+<div class="span-24">
+  <%= semantic_form_for @post do |f| %>
+    <%= render "shared/errors" %>
+    <%= f.inputs  do %>
+      <%= f.input :title %>
+      <%= f.input :body  %>
+      <%= f.input :published, :as => :radio %>
+      <%= f.input :user, :required => true %>
+      <%= f.input :category, :label => "Categories" %>
+    <% end %>
+    
+    <% render "categories" %>
 
-  <%= render "shared/errors" %>
+    <%= f.buttons do %>
+      <%= f.commit_button "Submit" %>
+    <% end %>
 
-  <%= f.inputs  do %>
-    <%= f.input :title, :hint => "Use the post title" %>
-    <%= f.input :body  %>
-    <%= f.input :published, :as => :radio %>
-    <%= f.input :user, :required => true %>
-    <%= f.input :category, :label => "Categories" %>
   <% end %>
 
-  
- <% render "categories" %>
+</div>
 
-
-  <%= f.buttons do %>
-    <%= f.commit_button "Submit" %>
-  <% end %>
-
-<% end %>
-<%= debug(@post) if Rails.env.development? %>
+<%#= debug(@post) if Rails.env.development? %>
 
 
