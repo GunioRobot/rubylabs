@@ -3,7 +3,7 @@
   <div class="span-17">
     <table>
       <tr>
-	<th> category </th>
+	<th> Category </th>
       </tr>
       <tr>
 	<% for category in @categories  %>
@@ -21,8 +21,6 @@
     </table>
     <%= link_to "New Category", new_category_path %><br /><br />
   </div>
-
-
   <div class="span-6" id="sidebar">
     <%= render "shared/sidebar" %>
   </div>
