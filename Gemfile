@@ -13,7 +13,7 @@ gem 'RedCloth', '4.2.3'
 gem 'liquid', '2.2.2'
 gem 'formtastic', '~> 1.2.2'
 gem 'validation_reflection', '>= 1.0.0'
-
+gem 'faker'
 ##########################################################
 
 # gem 'gravatar_image_tag', '0.1.0'
