@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   
+    
   def index
     @users = User.paginate(:page => params[:page])
   end
@@ -33,7 +34,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     respond_to do |format|
-      if @user.update_attributes(params[:category])
+      if @user.update_attributes(params[:user])
         format.html { redirect_to(@user, :success => "User successfully updated.")}
         else
         render :action => 'edit'
@@ -49,4 +50,15 @@ class UsersController < ApplicationController
       format.html { redirect_to(users_url)}
     end
   end
+  
+  
+  private
+  
+  def authenticate
+    deny_access unless true
+  end
+  
+  
+  
+  
 end
