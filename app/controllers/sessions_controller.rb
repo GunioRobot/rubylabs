@@ -8,11 +8,13 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to user, :notice => "Logged in!"
     else
-      flash.new.alert = "Invalid email or password"
-      render new
+      flash.now.alert = "Invalid email or password"
+      render "new"
     end
   end
   
+  def update
+  end
   
   def destroy
     session[:user_id] = nil

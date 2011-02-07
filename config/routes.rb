@@ -28,6 +28,7 @@ Rubylabs::Application.routes.draw do
   get "users/create"
   get "users/destroy"
   get "users/new"
+  get "users/edit"
 
   get "sign_up" => "users#new", :as => "sign_up"
   get "log_in" => "sessions#new", :as => "log_in"
