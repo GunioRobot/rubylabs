@@ -9,3 +9,4 @@ doc/api
 .DS_Store
 #.#
 *#
+lib/tasks/*

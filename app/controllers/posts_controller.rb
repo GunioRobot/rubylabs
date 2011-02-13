@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  
+#  before_filter :authorize, :except => [:index, :show]
+  
   # GET /posts
   # GET /posts.xml
   def index
@@ -24,10 +27,9 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   # GET /posts/new.xml
+
   def new
     @post = Post.new
-    logger.debug "################### Debugging NEW ###################"
-    debugger
     # 3.times do
     #   @post.categories.build
     # end
@@ -42,7 +44,6 @@ class PostsController < ApplicationController
   # POST /posts.xml
   def create
     @post = Post.new(params[:post])
-    logger.debug "###################### Debugging CREATE  ######################"
     #respond_to do |format|
       if @post.save
     #     format.html { redirect_to(@post, :notice => 'Post was successfully created.') }

@@ -10,7 +10,7 @@ class PagesController < ApplicationController
   def contact
     @title = "contact"
   end
-  
+
   def blog
     @title = "blog"
   end

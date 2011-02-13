@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   
-    
+   before_filter :authorize, :only => [:index]
+  
   def index
     @users = User.paginate(:page => params[:page])
   end
@@ -52,13 +53,11 @@ class UsersController < ApplicationController
   end
   
   
-  private
-  
-  def authenticate
-    deny_access unless true
-  end
-  
-  
-  
-  
-end
+  # def authorize
+  #   @user = User.find(params[:id])
+  #   if true
+  #     flash[:notice] = "You must be an admin to enter this page!"
+  #     redirect_to :controller => :sessions, :action => :new
+  #   end
+  # end
+ end

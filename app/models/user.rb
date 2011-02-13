@@ -28,10 +28,15 @@ class User < ActiveRecord::Base
   validates :name, :presence => true, :length => {:minimum => 4,  :maximum => 50 } 
   validates :email, :format => { :with => email_regex, :on => :create },
                                  :uniqueness => {:case_sensitive => false}
-   
+ 
+  validates :password, :presence => true,  :confirmation => true,
+                      :length => { :within => 6..40}
+  
   has_many :posts, :dependent => :destroy
   has_many :categories, :through => :posts
   
+  
+  private
   
   def encrypt_password
     if password.present?
@@ -50,8 +55,6 @@ class User < ActiveRecord::Base
     end
   end
   
-  
-    
   def self.per_page
     10
   end

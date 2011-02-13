@@ -1,11 +1,17 @@
 class SessionsController < ApplicationController
+  
+  helper_method :current_user
+    
   def new
+    @title = "Sign in"
   end
 
   def create
+    debugger 
     user = User.authenticate(params[:email], params[:password])
     if user
       session[:user_id] = user.id
+      logger.debug "Session attributes hash: #{session.inspect}"
       redirect_to user, :notice => "Logged in!"
     else
       flash.now.alert = "Invalid email or password"
@@ -13,13 +19,8 @@ class SessionsController < ApplicationController
     end
   end
   
-  def update
-  end
-  
   def destroy
     session[:user_id] = nil
     redirect_to root_url, :notice => "Logged out"
   end
-  
-  
 end
