@@ -1,26 +1,10 @@
 
-<div id="user_nav">
-  <h3 class="caps">Login</h3>
-  <div class="box">
-    <% if current_user %>
-      Logged in as 
-      <span class="caps" >
-      <%= current_user.name %>
-</span>
-      <%= link_to "Log out", log_out_path %>
-    <% else %>
-      <%= link_to "Sign up", sign_up_path %>
-      <%= link_to "Log in", log_in_path %>
-    <% end %>
-  </div>
-</div>
-
-
-
 <div id="recent-software">
   <h3 class="caps">Recent Posts</h3>
   <div class="box">
-    <a href="#" class="quite">Debugger</a>
+    <span class="quiet">
+
+    </span>
   </div>
 </div>
 
@@ -28,7 +12,6 @@
   <h3 class="caps">Categories</h3>
   <div class="box">
     <span class="quiet">
-
     </span>
   </div>
 </div>

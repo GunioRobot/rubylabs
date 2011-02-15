@@ -1,12 +1,11 @@
 class PostsController < ApplicationController
   
-#  before_filter :authorize, :except => [:index, :show]
+  before_filter :authorize, :except => [:index, :show]
   
   # GET /posts
   # GET /posts.xml
   def index
     @posts = Post.paginate(:page => params[:page])
-
     # respond_to do |format|
     #   format.html # index.html.erb
     #   format.xml  { render :xml => @posts }

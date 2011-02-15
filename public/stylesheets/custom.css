@@ -9,62 +9,74 @@ h1, h2, h3 {
 }
 
 .box {
-    background-color: #E8E8E8 ;
+    background-color: #B8B8B8 ;
 }
 
 
 /* Header
 --------------------------------------------------*/
 header h1 {
+    position: relative;
+    top: 10px;
     color: #cf0000;
     font-weight: bold;
-    padding: 0 0 0 13px;
+    padding: 0px 0 0 15px;
 }
 
 #header-wrap {
-    position: relative ;
-    bottom: 5em;
-    padding-left: 10px;
+    display:inline-block;
+    background-color: transparent;
+    margin-top: -7em;
+}
+
+#status-bar {
+    position:relative;
+    top: -8em;
+    text-align: right ;
+    background-color: transparent;
+    color: white;
 }
 
 #nav-top {
-    padding-top: 15px;
+    position: relative;
+    top: 1.8em;
+    padding-left: 20px;
+    padding-right: 0px;
+    margin-left:0px;
 }
 
 
 div.content-wrap {
     position: relative;
-    padding-top: 10px;
-    padding-left: 20px;
+    padding-top: 0px;
+    padding-left: 18px;
 }
 
-div.buddha-china {
-    margin-buttom: 100px;
-    width: 50%;
-}
 
-p#anectode {
-    text-align: center;
-}
+/* div.buddha-china { */
+/*     margin-buttom: 100px; */
+/*     width: 50%; */
+/* } */
+
+/* p#anectode { */
+/*     text-align: center; */
+/* } */
 
 
 div#sidebar {
-    margin-top: 25px;
+    margin-top: 2em;
  
 }
 
 
 /* Footer
 --------------------------------------------------*/
-footer { 
+footer {
     background: #000;
     color: white;
     padding: 14px 0 1px 10px;
 }
 
-[title] {
-   color: blue;
-}
 
 /* Navigation
 --------------------------------------------------*/
@@ -92,12 +104,7 @@ a:hover, a:active {
    color: #ee5647;
 }
   
-/* Layout
-__________________________________________________*/
 
-
-/* Container
---------------------------------------------------*/
 
 
 
