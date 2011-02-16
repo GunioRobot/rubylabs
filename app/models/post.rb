@@ -15,7 +15,7 @@
 
 class Post < ActiveRecord::Base
   
-  attr_accessible :title, :body, :published, :user_id, :category_id
+  attr_accessible :title, :body, :published
   
  validates_presence_of :title, :body, :published
   

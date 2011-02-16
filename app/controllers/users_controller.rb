@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   
-   before_filter :authorize, :only => [:index]
+  before_filter :authorize, :only => [:index]
   
+  debugger
   def index
     @users = User.paginate(:page => params[:page])
   end

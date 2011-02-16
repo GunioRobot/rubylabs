@@ -3,6 +3,7 @@ class CategoriesController < ApplicationController
   
    before_filter :authorize, :except => [:index, :show]
   
+  debugger
   def index
     @categories = Category.all
   end

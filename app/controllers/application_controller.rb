@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   helper_method :current_user, :admin?, :singend_in?
+  
+  before_filter :categories, :posts
     
   protected
 
@@ -31,9 +33,13 @@ class ApplicationController < ActionController::Base
   end
   
   
-  # def categories
-  #   @categories = Category.all
-  #   return @categories
-  # end
+  def categories
+    @categories = Category.all
+    return @categories
+  end
+  
+  def posts
+    @posts = Post.all
+  end
 
 end

@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   
   # GET /posts
   # GET /posts.xml
+  debugger
   def index
     @posts = Post.paginate(:page => params[:page])
     # respond_to do |format|
