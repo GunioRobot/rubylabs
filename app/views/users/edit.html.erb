@@ -1,34 +1,4 @@
 <div class="span-24 content-wrap">
   <h2>Edit User</h2>
-
-<div class="span-17 prepend-2">
-  <%#= render :partial => "users_form" %>
-
-<%=  form_tag sessions_path do %>
-
-  <p>
-    <%= label_tag :email %> <br />
-    <%= text_field_tag "params[:email]", @user.email %><br />
-  </p>
-
-<p>
-  <%= label_tag  :password %><br />
-  <%= password_field_tag "params[:password]" %>
-</p>
-
-<p>
-  <%= label_tag :password_confirmation %><br />
-  <%= password_field_tag :password_confirmation %>
-</p>
-
-<p class="button"><br />
-  <%= submit_tag %>
-</p>
-<% end %>
-
-</div>
-<hr />
-
-<%= link_to "Back", user_path %>
-
+    <%= render :partial => "users_form" %>
 </div>

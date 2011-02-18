@@ -1,31 +1,23 @@
-
-
 <div class="span-24 content-wrap">
   <div class="span-17">
     <%= will_paginate %><br>
     <% @posts.each do |post| %>
       <h3><%= post.title %></h3>
       <div class="span-4 post-des">
-
 	<%= time_ago_in_words(post.created_at) %> ago. <br />
 	<%= post.user.name %><br/>
-
 	<% if admin? %>
 	  <%= link_to 'Show', post %> |
 	  <%= link_to 'Edit', edit_post_path(post) %> |
 	  <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method =>
 		:delete %>
-	  
 	<% elsif post.user_id == session[:user_id] %>
 	  <%= link_to "Show", post %> |
 	  <%= link_to 'Edit', edit_post_path(post) %> |
 	  <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method =>
 		:delete %>
 	<% end %>
-
-   
       </div> 
-
       <div class="span-12"> 
 	<%#= image_tag("blackhole250x200.gif", :size => "150x110", :alt =>
 		       "Black" %>
@@ -34,19 +26,13 @@
 	<br />
       </div>
       <hr />
-
     <% end %>
-
     <% if admin? || current_user %>
       <%= link_to 'New Post', new_post_path %><br />  <br />
     <% end %>
-
     <%= will_paginate %><br />
-
   </div>
-
   <div class="span-6 last" id="sidebar" >
     <%= render "shared/sidebar" %>
   </div>
-
 </div>
