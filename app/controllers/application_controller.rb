@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  helper_method :current_user, :admin?, :singend_in?
+  helper_method :current_user, :admin?
 
   before_filter :categories, :posts
 
@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   #  Rails.logger.level = 0
   def authorize
-    unless admin?
+    unless current_user
       flash[:error] = "Unauthorized access denied."
       redirect_to log_in_path
       false

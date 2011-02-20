@@ -37,7 +37,6 @@ gem 'flickr', '1.0.2'
 
 gem 'nokogiri', '1.4.4'
 
-
 group :development do
   gem 'ruby-debug19'
   gem 'rspec-rails', '2.0.1'
