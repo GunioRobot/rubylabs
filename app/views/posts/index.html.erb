@@ -5,7 +5,7 @@
       <h3><%= post.title %></h3>
       <div class="span-4 post-des">
 	<%= time_ago_in_words(post.created_at) %> ago. <br />
-	<%= post.user.name %><br/>
+	<%= current_user.name  %><br />
 	<% if admin? %>
 	  <%= link_to 'Show', post %> |
 	  <%= link_to 'Edit', edit_post_path(post) %> |
@@ -17,6 +17,7 @@
 	  <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method =>
 		:delete %>
 	<% end %>
+
       </div> 
       <div class="span-12"> 
 	<%#= image_tag("blackhole250x200.gif", :size => "150x110", :alt =>

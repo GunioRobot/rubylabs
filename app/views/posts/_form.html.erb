@@ -4,12 +4,9 @@
       <%= f.input :title %>
       <%= f.input :body  %>
       <%= f.input :published, :as => :radio %>
-      <%= f.input :user, :required => true %>
       <%= f.input :category, :required => true %>
-    <% end %>
-    
-    <% render "categories" %>
 
+    <% end %>
     <%= f.buttons do %>
       <%= f.commit_button "Submit" %>
     <% end %>
