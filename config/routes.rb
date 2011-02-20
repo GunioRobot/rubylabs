@@ -18,7 +18,9 @@ Rubylabs::Application.routes.draw do
   match '/contact', :to => 'pages#contact'
   match '/about'  , :to => 'pages#about'
   match '/home'   , :to => 'pages#home'
-  
+  match '/flickr' , :to => 'flickr#index'
+
+
   get "posts/create"
   get "posts/destroy"
   

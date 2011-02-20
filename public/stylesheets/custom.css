@@ -8,48 +8,100 @@ h1, h2, h3 {
     color: black;
 }
 
+div {
+    /* transform: rotate(30deg); */
+     /* -moz-transform:matrix(0.866,0.5,-0.5,0.866,0,0); */
+    /* -moz-transform: rotate(20deg) */
+}
+
 .box {
-    background-color: #B8B8B8 ;
+    background-color: white;
+    -moz-box-shadow: 10px 10px 10px #888888;
+    box-shadow: h-shadow 10px 10px 10px 10px blue;
 }
 
 
 /* Header
 --------------------------------------------------*/
-header h1 {
-    position: relative;
-    top: 10px;
+h1 {
+    /* position: relative; */
+    /* top: 10px; */
     color: #cf0000;
     font-weight: bold;
-    padding: 0px 0 0 15px;
+    /* padding: 0px 0 0 15px; */
 }
 
-#header-wrap {
-    display:inline-block;
-    background-color: transparent;
-    margin-top: -7em;
+.header-wrap {
+    position:relative;
+    top: -60px;
+    background-color: blue;
+    height: 0px;
+    /* margin-top: 0em; */
 }
+
+.nav-top {
+    position:ralative;
+    top: 30px;
+    /* z-index:-1; */
+    /* padding: 0px; */
+    /* margine: 0; */
+    /* padding-left: 20px; */
+    /* padding-right: 0px; */
+    /* margin-left:0px; */
+    background-color: transparent;
+    text-align: center;
+}
+
+#logo {
+    position:inline;
+    top: 0px;
+    /* z-index:1; */
+    background-color: transparent;
+    text-align:center;
+    height: 50px;
+}
+
 
 #status-bar {
-    position:relative;
-    top: -8em;
-    text-align: right ;
-    background-color: transparent;
+    position:absolute;
+    /* z-index: 1; */
+    /* top: 4em; */
+    background-color: transparent ;
     color: white;
+    text-align: right;
 }
 
-#nav-top {
-    position: relative;
-    top: 1.8em;
-    padding-left: 20px;
-    padding-right: 0px;
-    margin-left:0px;
+.round {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 0px;
+    border-radius:0px;
 }
 
+img {
+    /* background-postion: inherit; */
+    /* position:relative; */
+    /* top: 0px; */
+    /* bottom: 0px; */
+
+}
 
 div.content-wrap {
-    position: relative;
+   /* position: relative; */
     padding-top: 0px;
-    padding-left: 18px;
+    padding-left: 0px;
+}
+
+
+#lcol-1 {
+
+}
+
+#lcol-2 {
+
+}
+
+.title {
+    background-color: red;
 }
 
 
@@ -65,9 +117,7 @@ div.content-wrap {
 
 div#sidebar {
     margin-top: 2em;
- 
 }
-
 
 /* Footer
 --------------------------------------------------*/
@@ -104,8 +154,3 @@ a:hover, a:active {
    color: #ee5647;
 }
   
-
-
-
-
-

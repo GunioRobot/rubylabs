@@ -1,38 +1,35 @@
+<div class="span-24 last"  id="status-bar">
+  <% if current_user %>
+    Logged in as 
+    <span class="caps" >
+      <%= current_user.name %>
+    </span>
+    <%= link_to "Log out", log_out_path %>
+  <% else %>
+    <%= link_to "Sign up", sign_up_path %>
+    <%= link_to "Log in", log_in_path %>
+  <% end %>
+</div>
 
-<header>
-  <%= banner %>    
-  <div id="header-wrap">  
-    <div class="span-23" id="status-bar">
-      <% if current_user %>
-	Logged in as 
-	<span class="caps" >
-	  <%= current_user.name %>
-	</span>
-	<%= link_to "Log out", log_out_path %>
-      <% else %>
-	<%= link_to "Sign up", sign_up_path %>
-	<%= link_to "Log in", log_in_path %>
-      <% end %>
-    </div>
-
-    <div class="span-24">
-      <div class="span-8 large">
-	<h1> Ruby Labs  <%= image_tag("logo.gif",  :size => "40x25") %></h1>
-      </div>
-
-      <div  class="span-10 prepend-6 last">      
-	<div style="background-color:;" id="nav-top">
-	  <span class="caps">
-	    <nav>
-	      <%= link_to "home", :home %> |
-	      <%= link_to "about", :about %> |
-	      <%= link_to "contact", :contact %> |
-	      <%= link_to "blog", :posts %> |
-	      <%= link_to "Wolfram|Alpha", :wolfram_alpha %>
-	    </nav>
-	  </span>
-	</div>
-      </div>
-    </div>
+  <div class="span-24">
+    <%= banner %>    
   </div>
-</header>
+
+
+<div class="span-24 header-wrap">
+  <div class="span-8 large" id="logo">
+    <h1> Ruby Labs  <%= image_tag("logo.gif",  :size => "40x25") %></h1>
+  </div>
+
+  <div  class="span-10 push-6 last nav-top">      
+    <span class="caps">
+
+      <%= link_to "home", :home %> |
+      <%= link_to "about", :about %> |
+      <%= link_to "contact", :contact %> |
+      <%= link_to "blog", :posts %> |
+      <%= link_to "Wolfram|Alpha", :wolfram_alpha %>
+    </span>
+  </div>
+</div>
+

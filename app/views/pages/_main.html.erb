@@ -1,24 +1,18 @@
 
+<h3><%= "Willkommen" || @title %></h3>
 
-  <h3><%= @title %></h3>
+<%=raw RedCloth.new('Vestibulum venenatis. Nulla vel ipsum. Proin rutrum,
+       urna sit amet bibendum **pellentesque**, ante sapien varius turpis, eu nonummy
+       nunc urna scelerisque ante. Nunc sed leo at dolor pharetra facilisis. Sed
+       sed lectus at justo dapibus tristique. Morbi molestie pulvinar elit. Donec
+       dictum nibh nec est. Aliquam sagittis, lacus a pharetra tempor, enim justo
+       tempor nisi, at aliquet nulla metus sed augue. Praesent sed
+       nibh. Vestibulum bibendum enim ut nisi fringilla accumsan. Nullam dapibus
+       fermentum nulla. Phasellus in orci vel justo facilisis iaculis. Quisque
+       facilisis ornare felis. Curabitur nunc libero, dapibus vel, commodo nec,
+       semper a, massa. Suspendisse potenti. Morbi a nisl. Nunc euismod elit non
+       lectus.').to_html %> 
+
 
  
-  <div class="span-12 prepend-2" >
-    <%=raw RedCloth.new('Vestibulum venenatis. Nulla vel ipsum. Proin rutrum,
-    urna sit amet bibendum pellentesque, ante sapien varius turpis, eu nonummy
-    nunc urna scelerisque ante. Nunc sed leo at dolor pharetra facilisis. Sed
-    sed lectus at justo dapibus tristique. Morbi molestie pulvinar elit. Donec
-    dictum nibh nec est. Aliquam sagittis, lacus a pharetra tempor, enim justo
-    tempor nisi, at aliquet nulla metus sed augue. Praesent sed
-    nibh. Vestibulum bibendum enim ut nisi fringilla accumsan. Nullam dapibus
-    fermentum nulla. Phasellus in orci vel justo facilisis iaculis. Quisque
-    facilisis ornare felis. Curabitur nunc libero, dapibus vel, commodo nec,
-    semper a, massa. Suspendisse potenti. Morbi a nisl. Nunc euismod elit non
-    lectus.').to_html %> 
-    <br /><br />
-    
- </div> 
- 
-
-
 

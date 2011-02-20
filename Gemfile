@@ -14,12 +14,13 @@ gem 'liquid', '2.2.2'
 gem 'formtastic', '~> 1.2.2'
 gem 'validation_reflection', '>= 1.0.0'
 gem 'bcrypt-ruby', :require => 'bcrypt'
+gem 'will_paginate', '3.0.pre2'
+gem 'flickr', '1.0.2'
 ##########################################################
 
 # gem 'gravatar_image_tag', '0.1.0'
-gem 'will_paginate', '3.0.pre2'
-# gem 'jquery_rails3'
 
+# gem 'jquery_rails3'
 
 
 # Use unicorn as the web server
@@ -35,16 +36,6 @@ gem 'will_paginate', '3.0.pre2'
 # gem 'bj'
 
 gem 'nokogiri', '1.4.4'
-
-# gem 'sqlite3-ruby', :require => 'sqlite3'
-# gem 'aws-s3', :require => 'aws/s3'
-
-# Bundle gems for the local environment. Make sure to
-# put test-only gems in this group so their generators
-# and rake tasks are available in development mode:
-# group :development, :test do
-#   gem 'webrat'
-# end
 
 
 group :development do

@@ -1,5 +1,5 @@
 module ApplicationHelper
-  
+
   def title
     base_title = "Ruby Labs Home Page"
     if @title.nil?
@@ -8,10 +8,8 @@ module ApplicationHelper
       "#{base_title} | #{@title}"
     end
   end
-  
+
   def banner
-   image_tag("banner06.gif", :size => "950x188", :alt => "rubylabs") 
+   image_tag("banner06.gif", :size => "950x180", :alt => "rubylabs") 
   end
-  
-  
 end
