@@ -5,7 +5,7 @@
 
   <div class="span-4">
       <%= time_ago_in_words(@post.created_at) %> ago. <br />
-      <%= current_user.name  %>
+      <%= current_user.name unless current_user.nil?  %>
     </div>
 
   <div class="span-12">

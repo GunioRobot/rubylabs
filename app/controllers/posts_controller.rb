@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   
-  before_filter :authorize, :except => [:index, :show]
+  before_filter :authorize,  :only => [:create, :update, :destroy]
   
   # GET /posts
   # GET /posts.xml
@@ -42,22 +42,22 @@ class PostsController < ApplicationController
 
   # POST /posts
   # POST /posts.xml
+  debugger
   def create
     @post = Post.new(params[:post])
-    #respond_to do |format|
+    respond_to do |format|
       if @post.save
-    #     format.html { redirect_to(@post, :notice => 'Post was successfully created.') }
-    #     format.xml  { render :xml => @post, :status => :created, :location => @post }
-        redirect_to posts_path;
-       else
+        format.html { redirect_to(@post, :success => 'Post was successfully created.') }
+        format.xml  { render :xml => @post, :status => :created, :location => @post }
         
-    #     format.html { render :action => "new" }
-    #     format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
-
-         render :action => 'new'
+      else
+        
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
       end
+    end
   end
-
+  
   # PUT /posts/1
   # PUT /posts/1.xml
   def update
@@ -66,10 +66,10 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.update_attributes(params[:post])
         format.html { redirect_to(@post, :notice => 'Post successfully updated.') }
-      #  format.xml  { head :ok }
+        #  format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
-      #  format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
+        #  format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
       end
     end
   end

@@ -20,13 +20,13 @@ class ApplicationController < ActionController::Base
   def admin?
     user = User.find(session[:user_id]) if session[:user_id]
     if user && user.admin
-      true
+     true
     else
       false
     end
   end
 
-  private
+   private
 
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
@@ -34,8 +34,8 @@ class ApplicationController < ActionController::Base
 
 
   def categories
-    @categories = Category.all
-    return @categories
+   @categories = Category.all
+    # return categories
   end
 
   def posts

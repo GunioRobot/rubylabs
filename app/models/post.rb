@@ -14,8 +14,8 @@
 #
 
 class Post < ActiveRecord::Base
-  
-  attr_accessible :title, :body, :published, :user
+  debugger
+  attr_accessible :title, :body, :published, :user_id, :category_id
   
  validates_presence_of :title, :body, :published
   
@@ -23,11 +23,11 @@ class Post < ActiveRecord::Base
   belongs_to :category
   
   
-  # def category_attributes=(category_attributes)
-  #   category_attributes.each do |attributes|
-  #     category.build(attribues)
-  #   end
-  # end
+  def category_attributes=(category_attributes)
+    category_attributes.each do |attributes|
+      category.build(attribues)
+    end
+  end
   
   
   def self.per_page

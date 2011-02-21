@@ -1,4 +1,4 @@
-class AddIndexToPosts < ActiveRecord::Migration
+class AddIndexesToPost < ActiveRecord::Migration
   def self.up
     add_index :posts, :user_id
     add_index :posts, :category_id
