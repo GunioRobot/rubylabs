@@ -53,6 +53,8 @@ GEM
     faker (0.3.1)
     flickr (1.0.2)
       xml-simple (>= 1.0.7)
+    flickraw (0.8.4)
+      json (>= 1.1.1)
     formtastic (1.2.3)
       actionpack (>= 2.3.7)
       activesupport (>= 2.3.7)
@@ -141,6 +143,7 @@ DEPENDENCIES
   factory_girl_rails (= 1.0)
   faker (= 0.3.1)
   flickr (= 1.0.2)
+  flickraw (= 0.8.4)
   formtastic (~> 1.2.2)
   liquid (= 2.2.2)
   mysql2

@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   
   before_filter :authorize
   
-  debugger
   def index
     if admin?
     @users = User.paginate(:page => params[:page])

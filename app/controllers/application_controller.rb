@@ -16,7 +16,6 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  debugger
   def admin?
     user = User.find(session[:user_id]) if session[:user_id]
     if user && user.admin

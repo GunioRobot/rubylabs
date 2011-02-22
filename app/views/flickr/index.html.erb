@@ -1,10 +1,15 @@
-<%= form_tag_remote :url => {:action => 'search' }, :update => 'photos' %>
+<h1>Flickr goes here</h1>
+
+<%=  form_tag  :url => {:action => 'search' } , :method => :get, :remote => true do %>
 <fieldset>
-  <label for="tags">Tags:</label>
-  <%= text_field_tag 'tags' %>
-  <%= submit.tag 'Find' %>
+  <%= text_field_tag "tags" %>
+  <%= submit_tag 'Find' %>
 </fieldset>
 
-<div id="photos"></div> 
 
-<%= end_form_tag %>
+
+<div id="photos"></div>
+
+<% end %>
+
+

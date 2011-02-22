@@ -14,7 +14,7 @@
 #
 
 class Post < ActiveRecord::Base
-  debugger
+  
   attr_accessible :title, :body, :published, :user_id, :category_id
   
  validates_presence_of :title, :body, :published

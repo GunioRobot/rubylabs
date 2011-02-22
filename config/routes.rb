@@ -13,6 +13,7 @@ Rubylabs::Application.routes.draw do
   resources :users
   resources :categories
   resources :sessions
+  resources :flickr
   
   match '/wolfram_alpha', :to => 'wolfram_alpha#show'
   match '/contact', :to => 'pages#contact'

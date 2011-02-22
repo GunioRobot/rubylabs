@@ -16,6 +16,7 @@ gem 'validation_reflection', '>= 1.0.0'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'will_paginate', '3.0.pre2'
 gem 'flickr', '1.0.2'
+gem 'flickraw', '0.8.4'
 ##########################################################
 
 # gem 'gravatar_image_tag', '0.1.0'
