@@ -1,11 +1,16 @@
 class CategoriesController < ApplicationController
 
   
-   before_filter :authorize, :except => [:index, :show]
+  before_filter :authorize, :except => [:show]
   
- 
+  
   def index
-    @categories = Category.all
+    if admin?
+      @categories = Category.all
+    else
+      flash[:error] = "Unathorized Access Denyed."
+      redirect_to :log_in
+    end
   end
   
   def new
@@ -24,7 +29,7 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
   end
   
-    def create
+  def create
     @category = Category.new(params[:category])
     respond_to do |format|
       if @category.save
@@ -39,8 +44,8 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     respond_to do |format|
       if @category.update_attributes(params[:category])
-          format.html { redirect_to(@category, :success => "Category successfully updated.")}
-        else
+        format.html { redirect_to(@category, :success => "Category successfully updated.")}
+      else
         render :action => 'edit'
       end
     end

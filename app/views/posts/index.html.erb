@@ -1,33 +1,35 @@
 <div class="span-24 content-wrap">
-  <div class="span-17">
-    <%= will_paginate %><br>
 
+  <div class="span-18">
+    <%= will_paginate %><br>
     <% @posts.each do |post| %>
       <h3><%= post.title %></h3>
+
       <div class="span-4 post-des">
 	<%= time_ago_in_words(post.created_at) %> ago. <br />
 	<%= post.user.name %>
 	<br />
 	<% if admin? %>
-	  <%= link_to 'Shou', post %> |
+	  <%= link_to 'Show', post %> |
 	  <%= link_to 'Edit', edit_post_path(post) %> |
 	  <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method =>
 		:delete %>
 	<% elsif post.user && post.user_id == session[:user_id] %>
-	  <%= link_to "Shox", post %> |
+	  <%= link_to "Show", post %> |
 	  <%= link_to 'Edit', edit_post_path(post) %> |
 	  <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method =>
 		:delete %>
 	<% end %>
-
       </div> 
-      <div class="span-12"> 
+
+      <div class="span-13"> 
 	<%#= image_tag("blackhole250x200.gif", :size => "150x110", :alt =>
 		       "Black" %>
 	<%#=raw RedCloth.new(truncate(post.body, :length => 120, :omission => '...(continue)')).to_html %>
 	<%=raw RedCloth.new(post.body).to_html %>
 	<br />
       </div>
+
       <hr />
     <% end %>
     <% if admin? || current_user %>
@@ -37,7 +39,7 @@
   </div>
   <div class="span-6 last" id="sidebar" >
     <%= render "shared/sidebar" %>
-    <%#= debug(@posts) if Rails.env.development? %>
+    <%= debug(params) if Rails.env.development? %>
   </div>
 
 </div>

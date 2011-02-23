@@ -154,6 +154,37 @@ a:hover, a:active {
    color: #ee5647;
 }
   
+.code {
+    margin: 5px 0;
+    /*  padding: 15px; */
+    padding: 15px;
+    text-align: left;
+    display: block;
+    overflow: auto;
+    font: 500 1em/1.5em 'Lucida Console', 'courier new', monospace ;
+    /* white-space: pre; */
+    /*  border: 1px solid #ECF8FE; */
+    /* border: 1px solid #bddd8d; */
+    border: 1px solid red;
+    background: #e6e6e6;
+}
 
+p.thumbs{ padding: 12px 0 0 10px; }
+
+.thumbs img {
+    position: relative;
+    border: 1px solid #ebebeb;
+    background: none;
+    padding: 7px;
+    margin: 5px;
+/* margin: 4px 7px 4px 4px; */
+}
+
+.thumbs img:hover {
+    border: 1px solid #c5c5c5;
+    background: none;
+}
+
+.thumbs a:hover { background-color: transparent; border: none }
 
 

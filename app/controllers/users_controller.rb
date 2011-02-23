@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   
-  before_filter :authorize
+  before_filter :authorize, :except => [:new, :create, :show]
   
   def index
     if admin?
@@ -22,7 +22,13 @@ class UsersController < ApplicationController
   
   def edit
     @title = "Edit"
-    @user = User.find(params[:id])
+    if admin?
+
+      @user = User.find(params[:id])
+    else
+      flash[:error] = "Unauthorized Access Denyed"
+      redirect_to :log_in
+    end
   end
     
   def create

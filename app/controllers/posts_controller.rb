@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   
-  before_filter :authorize,  :only => [:create, :update, :destroy]
+  before_filter :authorize,  :only => [:create, :update, :destroy, :new]
   
   # GET /posts
   # GET /posts.xml
