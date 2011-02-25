@@ -15,7 +15,7 @@ div {
 }
 
 .box {
-    background-color: transparent;
+    /* background-color: transparent; */
     /* -moz-box-shadow: 10px 10px 10px #888888; */
     /* box-shadow: h-shadow 10px 10px 10px 10px blue; */
 }
@@ -40,30 +40,25 @@ h1 {
 }
 
 .nav-top {
-    position:ralative;
+    position: ralative;
     top: 30px;
     /* z-index:-1; */
-    /* padding: 0px; */
-    /* margine: 0; */
-    /* padding-left: 20px; */
-    /* padding-right: 0px; */
-    /* margin-left:0px; */
     background-color: transparent;
     text-align: center;
 }
 
 #logo {
-    position:inline;
+    position: inline;
     top: 0px;
     /* z-index:1; */
     background-color: transparent;
-    text-align:center;
+    text-align: center;
     height: 50px;
 }
 
 
 #status-bar {
-    position:absolute;
+    position: absolute;
     /* z-index: 1; */
     /* top: 4em; */
     background-color: transparent ;
@@ -74,7 +69,7 @@ h1 {
 .round {
     -moz-border-radius: 3px;
     -webkit-border-radius: 0px;
-    border-radius:0px;
+    border-radius: 0px;
 }
 
 img {
@@ -104,17 +99,6 @@ div.content-wrap {
     background-color: red;
 }
 
-
-/* div.buddha-china { */
-/*     margin-buttom: 100px; */
-/*     width: 50%; */
-/* } */
-
-/* p#anectode { */
-/*     text-align: center; */
-/* } */
-
-
 div#sidebar {
     margin-top: 2em;
 }
@@ -130,11 +114,7 @@ footer {
 
 /* Navigation
 --------------------------------------------------*/
-/* nav { */
-/*     background-color: transparent; */
-/*     padding: 0 0.7em; */
-/*     white-space: nowrap; */
-/* } */
+
 
 .wolfram-alpha {
     width: 50%;
@@ -156,35 +136,13 @@ a:hover, a:active {
   
 .code {
     margin: 5px 0;
-    /*  padding: 15px; */
     padding: 15px;
     text-align: left;
     display: block;
     overflow: auto;
     font: 500 1em/1.5em 'Lucida Console', 'courier new', monospace ;
-    /* white-space: pre; */
-    /*  border: 1px solid #ECF8FE; */
-    /* border: 1px solid #bddd8d; */
+    white-space: pre;
     border: 1px solid red;
     background: #e6e6e6;
 }
-
-p.thumbs{ padding: 12px 0 0 10px; }
-
-.thumbs img {
-    position: relative;
-    border: 1px solid #ebebeb;
-    background: none;
-    padding: 7px;
-    margin: 5px;
-/* margin: 4px 7px 4px 4px; */
-}
-
-.thumbs img:hover {
-    border: 1px solid #c5c5c5;
-    background: none;
-}
-
-.thumbs a:hover { background-color: transparent; border: none }
-
 

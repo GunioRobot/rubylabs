@@ -83,6 +83,5 @@ class PostsController < ApplicationController
       format.html { redirect_to(posts_url) }
       format.xml  { head :ok }
     end
-    
   end
 end

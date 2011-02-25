@@ -14,24 +14,21 @@
 #
 
 class Post < ActiveRecord::Base
-  
+    
   attr_accessible :title, :body, :published, :user_id, :category_id
-  
- validates_presence_of :title, :body, :published
+
+  validates_presence_of :title, :body, :published
   
   belongs_to :user
   belongs_to :category
-  
-  
+    
   def category_attributes=(category_attributes)
     category_attributes.each do |attributes|
       category.build(attribues)
     end
   end
-  
-  
+    
   def self.per_page
     5
   end
-    
 end

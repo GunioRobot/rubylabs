@@ -4,8 +4,8 @@
   <div class="box">
 
     <span class="quiet">
-      <% for post in @posts %>
-	<%= link_to  post.title, post %><br />
+      <% for post in @sidebar_posts %>
+	<%= link_to  post.title.truncate(20), post %><br />
 	<% end %>
     </span>
 
@@ -17,7 +17,7 @@
   <div class="box">
 
     <span class="quiet">
-      <% for category in @categories %>
+      <% for category in @sidebar_categories %>
 	<%= link_to category.name, category %> (<%= category.posts.count %>) <br />
       <% end %>
 

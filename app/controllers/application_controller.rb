@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user, :admin?
 
-  before_filter :categories, :posts
+  before_filter :sidebar_categories, :sidebar_posts
 
   protected
 
@@ -32,13 +32,13 @@ class ApplicationController < ActionController::Base
   end
 
 
-  def categories
-   @categories = Category.all
+  def sidebar_categories
+   @sidebar_categories = Category.all
     # return categories
   end
 
-  def posts
-    @posts = Post.all
+  def sidebar_posts
+    @sidebar_posts = Post.order("created_at DESC").limit(5)
   end
 
 end

@@ -17,7 +17,10 @@ gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'will_paginate', '3.0.pre2'
 # gem 'flickr', '1.0.2'
 # gem 'flickraw', '0.8.4'
-gem 'flickr_fu', '0.3.0'
+# gem 'flickr_fu', '0.3.0'
+gem 'coderay', '0.9.7'
+gem 'acts_as_sanitiled', '1.1.5'
+gem 'sanitize', '2.0.0'
 ##########################################################
 
 # gem 'gravatar_image_tag', '0.1.0'

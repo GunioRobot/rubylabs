@@ -5,4 +5,4 @@ Rubylabs::Application.initialize!
 
 # require 'flickraw'
 # require 'flickr'
-require 'flickr_fu'
+# require 'flickr_fu'
