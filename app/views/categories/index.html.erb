@@ -1,6 +1,7 @@
 <div class="span-24 content-wrap">
+  <br />
   <h3>Categories</h3>
-  <div class="span-17">
+  <div class="span-18">
     <table>
       <tr>
 	<th> Category </th>
@@ -22,7 +23,7 @@
     <%= link_to "New Category", new_category_path %><br /><br />
   </div>
   <div class="span-6" id="sidebar">
-    <%= render "shared/sidebar" %>
+    <%#= render "shared/sidebar" %>
     <%= debug(params) if Rails.env.development? %>
   </div>
 </div>

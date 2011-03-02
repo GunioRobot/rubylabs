@@ -5,7 +5,9 @@
 	<%= form.input :email %>
 	<%= form.input :password %>
 	<%= form.input :password_confirmation %>
+	<% if admin? %>
 	<%= form.input :admin %>
+	<% end %>
       <% end %>
 
       <%= form.buttons do %>

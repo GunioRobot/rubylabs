@@ -15,8 +15,8 @@ div {
 }
 
 .box {
-    /* background-color: transparent; */
-    /* -moz-box-shadow: 10px 10px 10px #888888; */
+    background-color:transparent;
+    /* -moz-box-shadow: 2px 2px 10px #888888; */
     /* box-shadow: h-shadow 10px 10px 10px 10px blue; */
 }
 
@@ -48,8 +48,8 @@ h1 {
 }
 
 #logo {
-    position: inline;
-    top: 0px;
+    /* position: inline; */
+    /* top: 0px; */
     /* z-index:1; */
     background-color: transparent;
     text-align: center;

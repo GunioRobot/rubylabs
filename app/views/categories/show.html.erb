@@ -1,6 +1,7 @@
 <div class="span-24 content-wrap">
-  <h2>Category: <%= @category.name %></h2>
-  <div class="span-17">
+  
+  <div class="span-18"><br />
+<h3>Category: <%= @category.name %></h3>
     <% for post in @category.posts %>
       <h3> <%= post.title %></h3>
       <div class="span-4 post-des">
@@ -18,7 +19,7 @@
 		:delete %>
 	<% end %>
       </div>
-      <div class="span-12">
+      <div class="span-13">
 	<%=raw RedCloth.new(post.body).to_html %>
 	<br />
       </div>
@@ -26,6 +27,8 @@
     <% end %>
     <% if admin? || current_user %>
       <%= link_to 'New Post', new_post_path %> <br /><br />
+      <% elsif @category.posts.empty? %>
+	There are no posts in this category
       <% end %>
   </div>
   <div class="span-6 last" id="sidebar">

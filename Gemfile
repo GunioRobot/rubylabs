@@ -21,6 +21,7 @@ gem 'will_paginate', '3.0.pre2'
 gem 'coderay', '0.9.7'
 gem 'acts_as_sanitiled', '1.1.5'
 gem 'sanitize', '2.0.0'
+gem 'newrelic_rpm', '>=2.13.4'
 ##########################################################
 
 # gem 'gravatar_image_tag', '0.1.0'
@@ -56,6 +57,9 @@ group :test do
   gem 'spork' , '0.8.4'
   gem 'factory_girl_rails', '1.0'
   gem 'cucumber', '0.9.3'
+  gem 'capybara', '>=0.4.0'
+  gem 'launchy', '>=0.3.7'
+ 
 end
 
 #################### GEMS

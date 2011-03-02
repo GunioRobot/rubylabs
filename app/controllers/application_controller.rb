@@ -34,7 +34,6 @@ class ApplicationController < ActionController::Base
 
   def sidebar_categories
    @sidebar_categories = Category.all
-    # return categories
   end
 
   def sidebar_posts
