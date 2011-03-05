@@ -7,10 +7,10 @@
       <%= time_ago_in_words(@post.created_at) %> ago. <br />
       <%= current_user.name unless current_user.nil?  %><br />
       <%= link_to 'Edit', edit_post_path(@post) %> |
-      <%= link_to 'Back', posts_path %> <br />
+      <%= link_to 'Back', posts_path %>
     </div>
     <div class="span-13">
-      <%=raw sanitize(RedCloth.new(@post.body, [:filter_html, :filter_styles]).to_html) %>  <br />
+      <%=raw sanitize(textilize(coderay(@post.body))) %>
     </div>
     <hr />
   </div>
