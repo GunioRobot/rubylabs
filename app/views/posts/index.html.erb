@@ -23,12 +23,8 @@
       </div> 
 
       <div class="span-13"> 
-	<%#= image_tag("blackhole250x200.gif", :size => "150x110", :alt =>
-		       "Black" %>
-	<%#=raw RedCloth.new(truncate(post.body, :length => 120, :omission => '...(continue)')).to_html %>
-	<%#=raw sanitize(RedCloth.new(coderay(post.body), [:filter_html,
-	:filter_styles]).to_html) %>
-	<%=raw sanitize(textilize(coderay(post.body))) %>
+	<%#= image_tag("blackhole250x200.gif", :size => "150x110", :alt => "Black" %>  
+	<%= sanitize(coderay(RedCloth.new(post.body).to_html)) %> 
 	<br />
       </div>
 

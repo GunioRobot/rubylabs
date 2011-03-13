@@ -37,7 +37,7 @@ class UsersController < ApplicationController
       if @user.save
         format.html { redirect_to(@user, :success => "User successfully created!") }
       else
-        render :controller => :session, :action => "new"
+ #       render :controller => "sessions", :action => "new"
       end
     end
   end

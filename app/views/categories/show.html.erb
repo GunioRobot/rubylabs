@@ -20,7 +20,7 @@
 	<% end %>
       </div>
       <div class="span-13">
-	<%=raw RedCloth.new(post.body).to_html %>
+	<%= sanitize(coderay(RedCloth.new(post.body).to_html)) %>
 	<br />
       </div>
       <hr />

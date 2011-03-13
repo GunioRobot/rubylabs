@@ -86,15 +86,6 @@ div.content-wrap {
     padding-left: 0px;
 }
 
-
-#lcol-1 {
-
-}
-
-#lcol-2 {
-
-}
-
 .title {
     background-color: red;
 }
@@ -148,16 +139,16 @@ a:hover, a:active {
 
 /* CodeRay
 --------------------------------------------------*/
-
 .CodeRay {
   background-color: #232323;
   border: 1px solid black;
-  font-family: 'Courier New', 'Terminal', monospace;
+  font-family: 'Courier New', 'Terminal';
+  font-weight: bold;
   color: #E6E0DB;
-  padding: 3px 5px;
+  padding: 5px 0px 5px 10px;
   overflow: auto;
   font-size: 12px;
-  margin: 12px 0;
+  margin: 0;
 }
 .CodeRay pre {
   margin: 0px;

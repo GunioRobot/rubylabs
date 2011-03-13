@@ -10,7 +10,8 @@
       <%= link_to 'Back', posts_path %>
     </div>
     <div class="span-13">
-      <%=raw sanitize(textilize(coderay(@post.body))) %>
+      <%= sanitize(coderay(RedCloth.new(@post.body).to_html))%>
+      <br/>
     </div>
     <hr />
   </div>

@@ -12,19 +12,19 @@
 
 class User < ActiveRecord::Base
 
+  debugger 
+  logger.debug
+  Rails.logger.level=0
+    
   attr_accessible :name, :email, :password, :password_confirmation, :admin
   
   attr_accessor :password
-      
-  before_save :encrypt_password
+        
+  has_many :posts, :dependent => :destroy
+  has_many :categories, :through => :posts
   
-   
-  validates_presence_of :name
-  validates_confirmation_of :password
-  validates_presence_of :password, :on => :create
-
-   email_regex =  /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
   
+  email_regex =  /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
   validates :name, :presence => true, :length => {:minimum => 4,  :maximum => 50 } 
   validates :email, :format => { :with => email_regex, :on => :create },
                                  :uniqueness => {:case_sensitive => false}
@@ -32,8 +32,13 @@ class User < ActiveRecord::Base
   validates :password, :presence => true,  :confirmation => true,
                       :length => { :within => 6..40}
   
-  has_many :posts, :dependent => :destroy
-  has_many :categories, :through => :posts
+  validates_presence_of :name
+#  validates_presence_of :password, :on => :create
+  validates_presence_of :password
+  validates_confirmation_of :password_confirmation
+  
+  before_save :encrypt_password
+
   
   
   private
