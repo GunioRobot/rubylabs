@@ -1,5 +1,5 @@
 <div class="span-17">
-  <%= debug(params) if Rails.env.development? %>
+  <%= debug(@user) if Rails.env.development? %>
   <%= semantic_form_for @user do |form| %>
     <%= form.inputs do %>
       <%= form.input :name %>

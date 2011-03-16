@@ -33,8 +33,7 @@ class User < ActiveRecord::Base
                       :length => { :within => 6..40}
   
   validates_presence_of :name
-#  validates_presence_of :password, :on => :create
-  validates_presence_of :password
+  validates_presence_of :password, :on => :create
   validates_confirmation_of :password_confirmation
   
   before_save :encrypt_password
