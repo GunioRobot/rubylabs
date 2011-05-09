@@ -12,8 +12,8 @@
 
 class User < ActiveRecord::Base
 
-  debugger 
-  logger.debug
+  # debugger 
+  # logger.debug
   Rails.logger.level=0
     
   attr_accessible :name, :email, :password, :password_confirmation, :admin

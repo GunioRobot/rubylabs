@@ -4,7 +4,12 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :admin?
 
   before_filter :sidebar_categories, :sidebar_posts
+  before_filter :set_locale
 
+  def set_locale
+    I18n.locale = extract_locale_from_tld
+  end
+    
   protected
 
   #  Rails.logger.level = 0
@@ -39,5 +44,11 @@ class ApplicationController < ActionController::Base
   def sidebar_posts
     @sidebar_posts = Post.order("created_at DESC").limit(5)
   end
-
+  
+  def extract_locale_from_tld
+    parsed_locale = request.host.split('.').last
+    I18n.available_locales.include?(parsed_locale.to_sym) ? parsed_locale : nil
+  end
+  
+  
 end

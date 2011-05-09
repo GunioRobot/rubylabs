@@ -22,6 +22,7 @@ gem 'coderay', '0.9.7'
 gem 'acts_as_sanitiled', '1.1.5'
 gem 'sanitize', '2.0.0'
 gem 'newrelic_rpm', '>=2.13.4'
+gem 'i18n', '>=0.5.0'
 ##########################################################
 
 # gem 'gravatar_image_tag', '0.1.0'
