@@ -6,7 +6,7 @@
       <h3><%= post.title %></h3>
 
       <div class="span-4 post-des">
-	<%= time_ago_in_words(post.created_at) %> ago. <br />
+	<%= time_ago_in_words(post.created_at) %> <%= t(:ago)%>. <br />
 	<%= post.user.name %>
 	<br />
 	<% if admin? %>

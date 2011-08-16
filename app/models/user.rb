@@ -16,9 +16,9 @@ class User < ActiveRecord::Base
   # logger.debug
   Rails.logger.level=0
     
-  attr_accessible :name, :email, :password, :password_confirmation, :admin
+  attr_accessible :name, :email, :password, :password_confirmation, :admin, :language
   
-  attr_accessor :password
+  attr_accessor :password, :language
         
   has_many :posts, :dependent => :destroy
   has_many :categories, :through => :posts
@@ -48,7 +48,6 @@ class User < ActiveRecord::Base
       self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
     end
   end
-  
 
   def self.authenticate(email, password)
     user = find_by_email(email)

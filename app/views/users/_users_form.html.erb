@@ -1,20 +1,47 @@
 <div class="span-17">
+<div class="fieldset">
   <%= debug(@user) if Rails.env.development? %>
-  <%= semantic_form_for @user do |form| %>
-    <%= form.inputs do %>
-      <%= form.input :name %>
-      <%= form.input :email, :required => true %>
-      <%= form.input :password, :required => true %>
-      <%= form.input :password_confirmation, :required => true %>
-      <% if admin? %>
-	<%= form.input :admin %>
-      <% end %>
-    <% end %>
+  <%= form_for @user do |f| %>
+    <p>
+      <div class="label">
+      <%= f.label :name %>
+      </div>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <div class="label">
+      <%= f.label :email %>
+      </div>
+      <%= f.text_field :email %>
+    </p>
 
-    <%= form.buttons do %>
-      
-      <%= form.commit_button "Submit" %>
-    <% end %>
+    <p>
+      <div class="label">
+      <%= f.label :password %>
+      </div>
+      <%= f.password_field :password %>
+    </p>
+    <p>
+      <div class="label">
+      <%= f.label :password_confirmation %>
+      </div>
+      <%= f.password_field :password_confirmation %>
+    </p>
+    <p>
+      <div class="label">
+      <%= f.label :language, "Language" %><br %>
+      </div>
+      <div class="select">
+	<p>
+      <%= f.select :language, [["English", "en"], ["German", "de"]] %>
+</p>
+      </div>
+    </p>
+    <p>
+      <%= f.submit "Submit" %>
+    </p>
   <% end %>
+  </div>
   <%= link_to "Back", users_path %><br /><br />
 </div>
+

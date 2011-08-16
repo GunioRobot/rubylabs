@@ -4,12 +4,14 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :admin?
 
   before_filter :sidebar_categories, :sidebar_posts
-  before_filter :set_locale
+#  before_filter :set_locale
+  before_filter :set_user_language
 
-  def set_locale
-    I18n.locale = extract_locale_from_tld
-  end
-    
+#   def set_locale
+# #    I18n.locale = extract_locale_from_tld
+#     I18n.locale = "de"
+#   end
+
   protected
 
   #  Rails.logger.level = 0
@@ -35,8 +37,11 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
-
-
+  
+  def set_user_language
+    I18n.locale = @current_user.language if @current_user
+  end
+  
   def sidebar_categories
    @sidebar_categories = Category.all
   end
