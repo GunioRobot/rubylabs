@@ -33,9 +33,9 @@ Rubylabs::Application.routes.draw do
   get "users/new"
   get "users/edit"
 
-  get "sign_up" => "users#new", :as => "sign_up"
-  get "log_in" => "sessions#new", :as => "log_in"
-  get "log_out" => "sessions#destroy", :as => "log_out"
+  get "signup" => "users#new", :as => "sign_up"
+  get "login" => "sessions#new", :as => "log_in"
+  get "logout" => "sessions#destroy", :as => "log_out"
   
   # root :to => "pages#home"
 
