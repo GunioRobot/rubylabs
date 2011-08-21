@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(:version => 20110813225742) do
     t.string   "password_hash"
     t.string   "password_salt"
     t.boolean  "admin",         :default => false, :null => false
-    t.string   "language"
+    t.string   "language",                         :null => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

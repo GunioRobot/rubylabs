@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   def index
     if admin?
     @users = User.paginate(:page => params[:page])
+#      @users = User.all
       else
       flash[:error] = "Unauthorized Access Denyed."
       redirect_to :log_in
@@ -37,7 +38,7 @@ class UsersController < ApplicationController
       if @user.save
         format.html { redirect_to(@user, :success => "User successfully created!") }
       else
-        format.html { render :action => "new" }
+        format.html {render :action => "new"}
       end
     end
   end

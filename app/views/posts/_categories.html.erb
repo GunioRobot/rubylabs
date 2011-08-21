@@ -1,11 +1,12 @@
-    <%= semantic_fields_for :category do |form| %>
+<%= semantic_fields_for :category do |form| %>
 
-      <%= form.inputs do %>
-	<%= form.input :name,  :label => "Add Category" %>
-      <% end %>
+  <%= form.inputs do %>
+    <%= form.input :name,  :label => "Add Category" %>
+  <% end %>
 
-      <%= form.buttons do %>
-	<%= form.commit_button "Add categories" %>
-      <% end %>
+  <%= form.buttons do %>
+    <%= form.commit_button "Add categories" %>
+  <% end %>
   
-    <% end %>
+<% end %>
+
