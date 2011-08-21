@@ -1,13 +1,11 @@
 class CategoriesController < ApplicationController
-
   
   before_filter :authorize, :except => [:show]
   
-  
   def index
-    if admin?
+   if admin?
       @categories = Category.all
-    else
+   else
       flash[:error] = "Unathorized Access Denyed."
       redirect_to :log_in
     end

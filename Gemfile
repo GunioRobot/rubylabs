@@ -50,6 +50,8 @@ group :development do
   gem 'annotate-models', '1.0.4'
   gem 'faker', '0.3.1'
   gem 'cucumber-rails', '0.3.2'
+  gem 'guard'
+  gem 'guard-rspec'
 end
 
 group :test do

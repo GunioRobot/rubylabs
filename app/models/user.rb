@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
     
   attr_accessible :name, :email, :password, :password_confirmation, :admin, :language
   
-  attr_accessor :password, :language
+  attr_accessor :password
         
   has_many :posts, :dependent => :destroy
   has_many :categories, :through => :posts

@@ -4,10 +4,12 @@
     <h3><%= @post.title %></h3>
 
     <div class="span-4">
-      <%= time_ago_in_words(@post.created_at) %> ago. <br />
-      <%= current_user.name unless current_user.nil?  %><br />
+      <%= time_ago_in_words(@post.created_at) %> <%= t("ago") %>. <br />
+      <%= @post.user.name %><br />
+      <% if current_user.name == @post.user.name || current_user.admin? %>
       <%= link_to 'Edit', edit_post_path(@post) %> |
       <%= link_to 'Back', posts_path %>
+      <% end %>
     </div>
     <div class="span-13">
       <%= sanitize(coderay(RedCloth.new(@post.body).to_html))%>

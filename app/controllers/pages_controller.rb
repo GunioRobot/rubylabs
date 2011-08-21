@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   end
 
   def about
-    @title = "About"
+    @title = t("nav.about")
   end
 
   def contact

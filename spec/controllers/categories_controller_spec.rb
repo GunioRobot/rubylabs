@@ -7,6 +7,10 @@ describe CategoriesController do
     controller.should be_an_instance_of(CategoriesController)
   end
 
+  it "should respond to signin page" do
+    get :new
+    response.should_not be_success
+  end
 
   describe "GET 'index'" do
     it "should be successful" do

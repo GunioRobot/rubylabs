@@ -1,14 +1,9 @@
 <div class="span-24 content-wrap">
   <h2>Edit <%= @title %></h2>
   <div class="span-17">
-    <%= semantic_form_for @category do |f| %>
-      <%= f.inputs do %>
-	<%= f.input :name, :label => "Category" %>
-      <% end %>
-      <%= f.buttons do %>
-	<%= f.commit_button "Submit" %>
-      <% end %>
-    <% end %>
-    <%= link_to "Back", categories_path %><br /><br />
+   <%= render "category_form" %>
   </div>
 </div>
+
+
+

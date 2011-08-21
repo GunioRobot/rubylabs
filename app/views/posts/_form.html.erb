@@ -1,19 +1,48 @@
-<%= semantic_form_for @post do |f| %>
-    <%= render "shared/errors" %>
-    <%= f.inputs  do %>
-      <%= f.input :title %>
-      <%= f.input :body  %>
-      <%= f.input :published, :as => :radio %>
-      <%= f.input :user, :required => true %>
-      <%= f.input :category, :required => true %>
+<%= form_for @post do |f| %>
+  <%= render "shared/errors" %>
+  <div>
+    <p>
+      <%= f.label :title %>
+    </p>
+    <p>
+      <%= f.text_field :title %><br />
+    </p>
 
-    <% end %>
-    <%= f.buttons do %>
-      <%= f.commit_button "Submit" %>
-    <% end %>
+    <p>
+      <%= f.label :body %>
+    </p>
+    <p>
+      <%= f.text_area :body %>
+    </p>
 
-  <% end %>
+    <p>
+      <%= f.label "Published" %>
+    </p>
+    <p>
+      <%= f.check_box :published %>
+    </p>
 
-<%= debug(params) if Rails.env.development? %>
+    <p>
+      <%= f.label :user %>
+    </p>
+    <p>
 
+      <%= select_tag "post[user_id]",
+	  options_from_collection_for_select(User.all, "id" , "name") %> 
 
+    </p>
+
+    <p>
+      <%= f.label :category %>
+    </p>
+    <p>
+      <%= select_tag "post[category_id]",
+	  options_from_collection_for_select(Category.all, "id" , "name")%> 
+    </p>
+</div>
+<div>
+    <p>
+      <%= f.submit "Submit" %>
+    </p>
+  </div>
+<% end %>

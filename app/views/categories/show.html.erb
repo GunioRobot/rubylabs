@@ -1,7 +1,6 @@
 <div class="span-24 content-wrap">
-  
   <div class="span-18"><br />
-<h3>Category: <%= @category.name %></h3>
+    <h3>Category: <%= @category.name %></h3>
     <% for post in @category.posts.order("created_at DESC") %>
       <h3> <%= post.title %></h3>
       <div class="span-4 post-des">
@@ -26,10 +25,11 @@
       <hr />
     <% end %>
     <% if admin? || current_user %>
-      <%= link_to 'New Post', new_post_path %> <br /><br />
-      <% elsif @category.posts.empty? %>
-	There are no posts in this category
-      <% end %>
+      <%= link_to 'New Category', new_category_path %> | 
+      <%= link_to "Back", categories_path %><br /><br /> 
+    <% elsif @category.posts.empty? %>
+      There are no posts in this category
+    <% end %> 
   </div>
   <div class="span-6 last" id="sidebar">
     <%= render "shared/sidebar" %>
