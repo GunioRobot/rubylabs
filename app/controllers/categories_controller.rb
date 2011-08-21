@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
   before_filter :authorize, :except => [:show]
   
   def index
-    if admin?
+   if admin?
       @categories = Category.all
    else
       flash[:error] = "Unathorized Access Denyed."
@@ -54,7 +54,7 @@ class CategoriesController < ApplicationController
     @category.destroy
     flash[:success] = "Category successfully destroyed."
     respond_to do |format|
-      format.html {redirect_to(category_url)}
+      format.html {redirect_to(categories_url)}
     end
   end
 end
