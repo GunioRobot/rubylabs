@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  
+
   before_filter :authorize, :except => [:new, :create, :show]
-  
+
   def index
     if admin?
     @users = User.paginate(:page => params[:page])
@@ -9,18 +9,18 @@ class UsersController < ApplicationController
       else
       flash[:error] = "Unauthorized Access Denyed."
       redirect_to :log_in
-    end  
+    end
   end
-  
+
   def new
     @user = User.new
-  end 
-  
-  
+  end
+
+
   def show
     @user = User.find(params[:id])
   end
-  
+
   def edit
     @title = "Edit"
     if admin?
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
       redirect_to :log_in
     end
   end
-    
+
   def create
     @user = User.new(params[:user])
     respond_to do |format|
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
     end
   end
 
-  
+
   def update
     @user = User.find(params[:id])
     respond_to do |format|
@@ -54,7 +54,7 @@ class UsersController < ApplicationController
       end
     end
   end
-  
+
   def destroy
     @user = User.find(params[:id])
     @user.destroy
@@ -63,8 +63,8 @@ class UsersController < ApplicationController
       format.html { redirect_to(users_url)}
     end
   end
-  
-  
+
+
   # def authorize
   #   @user = User.find(params[:id])
   #   if true

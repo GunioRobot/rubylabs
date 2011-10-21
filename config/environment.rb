@@ -8,7 +8,7 @@ Rubylabs::Application.initialize!
 # require 'flickr_fu'
 
 
-# Store sessions in the database instead of cookies (run rake db:sessions:create) 
+# Store sessions in the database instead of cookies (run rake db:sessions:create)
 # -------------------------------------------------------------------------------
 # config.action_controller.session_store = :active_record_store
 #

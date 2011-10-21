@@ -55,11 +55,11 @@ describe CategoriesController do
   end
 
   describe "GET 'destroy'" do
-    
-    before :each do 
+
+    before :each do
       @category = Category.find(1)
     end
-        
+
     it "should be successful" do
       get 'destroy'
       response.should be_success

@@ -1,5 +1,5 @@
 Rubylabs::Application.routes.draw do
- 
+
   # get "wolfram_alpha/show"
 
   # resources :users do
@@ -7,14 +7,14 @@ Rubylabs::Application.routes.draw do
   #     get :posts, :categories
   #   end
   # end
-  
-        
+
+
   resources :posts
   resources :users
   resources :categories
   resources :sessions
 
-  
+
   match '/wolfram_alpha', :to => 'wolfram_alpha#show'
   match '/contact', :to => 'pages#contact'
   match '/about'  , :to => 'pages#about'
@@ -24,10 +24,10 @@ Rubylabs::Application.routes.draw do
 
   get "posts/create"
   get "posts/destroy"
-  
+
   get "categories/create"
   get "categories/destroy"
-  
+
   get "users/create"
   get "users/destroy"
   get "users/new"
@@ -36,11 +36,11 @@ Rubylabs::Application.routes.draw do
   get "signup" => "users#new", :as => "sign_up"
   get "login" => "sessions#new", :as => "log_in"
   get "logout" => "sessions#destroy", :as => "log_out"
-  
+
   # root :to => "pages#home"
 
   root :to => "pages#home"
-  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

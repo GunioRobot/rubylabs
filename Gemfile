@@ -62,7 +62,7 @@ group :test do
   gem 'cucumber', '0.9.3'
   gem 'capybara', '>=0.4.0'
   gem 'launchy', '>=0.3.7'
- 
+
 end
 
 #################### GEMS

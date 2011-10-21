@@ -20,11 +20,11 @@
 	  <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method =>
 		:delete %>
 	<% end %>
-      </div> 
+      </div>
 
-      <div class="span-13"> 
-	<%#= image_tag("blackhole250x200.gif", :size => "150x110", :alt => "Black" %>  
-	<%= sanitize(coderay(RedCloth.new(post.body).to_html)) %> 
+      <div class="span-13">
+	<%#= image_tag("blackhole250x200.gif", :size => "150x110", :alt => "Black" %>
+	<%= sanitize(coderay(RedCloth.new(post.body).to_html)) %>
 	<br />
       </div>
 

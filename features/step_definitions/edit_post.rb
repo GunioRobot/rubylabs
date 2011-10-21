@@ -3,5 +3,5 @@ Given /^(.*) not loged in$/ do |name|
 end
 
 When /^I log in$/ do
- 
+
 end

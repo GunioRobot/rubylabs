@@ -11,7 +11,7 @@ require 'spec_helper'
 #   end
 # end
 
-######################## 
+########################
 
 # describe UsersHelper do
 #   pending "add some examples to (or delete) #{__FILE__}"

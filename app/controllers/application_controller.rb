@@ -37,11 +37,11 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
-  
+
   def set_user_language
     I18n.locale = @current_user.language if @current_user
   end
-  
+
   def sidebar_categories
    @sidebar_categories = Category.all
   end
@@ -49,7 +49,7 @@ class ApplicationController < ActionController::Base
   def sidebar_posts
     @sidebar_posts = Post.order("created_at DESC").limit(5)
   end
-  
+
   def extract_locale_from_tld
     parsed_locale = request.host.split('.').last
     I18n.available_locales.include?(parsed_locale.to_sym) ? parsed_locale : nil

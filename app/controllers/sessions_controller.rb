@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
-  
+
   helper_method :current_user
-    
+
   def new
     @title = "Sign in"
   end
@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
       render "new"
     end
   end
-  
+
   def destroy
     session[:user_id] = nil
     redirect_to root_url, :notice => "Logged out"

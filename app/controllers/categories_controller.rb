@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
-  
+
   before_filter :authorize, :except => [:show]
-  
+
   def index
    if admin?
       @categories = Category.all
@@ -10,23 +10,23 @@ class CategoriesController < ApplicationController
       redirect_to :log_in
     end
   end
-  
+
   def new
     @category = Category.new
   end
-  
+
   def show
     @category = Category.find(params[:id])
     respond_to do |format|
       format.html {render :controller => :posts, :action => "show"}
     end
   end
-  
+
   def edit
     @title = "Category"
     @category = Category.find(params[:id])
   end
-  
+
   def create
     @category = Category.new(params[:category])
     respond_to do |format|

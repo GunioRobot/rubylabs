@@ -25,11 +25,11 @@
       <hr />
     <% end %>
     <% if admin? || current_user %>
-      <%= link_to 'New Category', new_category_path %> | 
-      <%= link_to "Back", categories_path %><br /><br /> 
+      <%= link_to 'New Category', new_category_path %> |
+      <%= link_to "Back", categories_path %><br /><br />
     <% elsif @category.posts.empty? %>
       There are no posts in this category
-    <% end %> 
+    <% end %>
   </div>
   <div class="span-6 last" id="sidebar">
     <%= render "shared/sidebar" %>

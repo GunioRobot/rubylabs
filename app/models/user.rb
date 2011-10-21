@@ -12,36 +12,36 @@
 
 class User < ActiveRecord::Base
 
-  # debugger 
+  # debugger
   # logger.debug
   Rails.logger.level=0
-    
+
   attr_accessible :name, :email, :password, :password_confirmation, :admin, :language
-  
+
   attr_accessor :password
-        
+
   has_many :posts, :dependent => :destroy
   has_many :categories, :through => :posts
-  
-  
+
+
   email_regex =  /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
-  validates :name, :presence => true, :length => {:minimum => 4,  :maximum => 50 } 
+  validates :name, :presence => true, :length => {:minimum => 4,  :maximum => 50 }
   validates :email, :format => { :with => email_regex, :on => :create },
                                  :uniqueness => {:case_sensitive => false}
- 
+
   validates :password, :presence => true,  :confirmation => true,
                       :length => { :within => 6..40}
-  
+
   validates_presence_of :name
   validates_presence_of :password, :on => :create
   validates_confirmation_of :password_confirmation
-  
+
   before_save :encrypt_password
 
-  
-  
+
+
   private
-  
+
   def encrypt_password
     if password.present?
       self.password_salt = BCrypt::Engine.generate_salt
@@ -57,9 +57,9 @@ class User < ActiveRecord::Base
       nil
     end
   end
-  
+
   def self.per_page
     10
   end
-  
+
 end
